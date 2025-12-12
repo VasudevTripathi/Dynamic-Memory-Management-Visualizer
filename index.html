@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Memory Management Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">
+                <span class="neon-text">Dynamic Memory</span>
+                <span class="neon-text-alt">Management Visualizer</span>
+            </h1>
+        </header>
+
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="card control-card">
+                    <h2 class="card-title">Memory Initialization</h2>
+                    <div class="control-group">
+                        <label for="totalMemoryInput">Total Memory Size</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="totalMemoryInput" placeholder="e.g. 1000" />
+                            <button id="initBtn" class="btn btn-primary">Initialize</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card control-card">
+                    <h2 class="card-title">Process Management</h2>
+                    <div class="control-group">
+                        <label for="pidInput">Process ID</label>
+                        <input type="text" id="pidInput" placeholder="e.g. P1" />
+                    </div>
+                    <div class="control-group">
+                        <label for="sizeInput">Size</label>
+                        <input type="number" id="sizeInput" placeholder="e.g. 120" />
+                    </div>
+                    <div class="control-group">
+                        <label for="algoSelect">Algorithm</label>
+                        <select id="algoSelect">
+                            <option value="first-fit">First Fit</option>
+                            <option value="best-fit">Best Fit</option>
+                            <option value="worst-fit">Worst Fit</option>
+                            <option value="next-fit">Next Fit</option>
+                        </select>
+                    </div>
+                    <div class="button-group">
+                        <button id="allocBtn" class="btn btn-success">Allocate</button>
+                        <button id="deallocBtn" class="btn btn-danger">Deallocate</button>
+                        <button id="resetBtn" class="btn btn-warning">Reset</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="card stats-card">
+                    <h2 class="card-title">Statistics</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-label">Total Memory</div>
+                            <div class="stat-value" id="statTotal">0</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Used Memory</div>
+                            <div class="stat-value" id="statUsed">0</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Free Memory</div>
+                            <div class="stat-value" id="statFree">0</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Free Holes</div>
+                            <div class="stat-value" id="statHoles">0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card memory-card">
+                    <h2 class="card-title">Memory Layout</h2>
+                    <div id="memoryContainer" class="memory-visualization"></div>
+                </div>
+
+                <div class="card log-card">
+                    <h2 class="card-title">Activity Log</h2>
+                    <div id="log" class="log-container"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p class="footer-text">
+                Created by 
+                <span class="maker-name">Vasudev Tripathi</span>, 
+                <span class="maker-name">Ayush Das</span>, 
+                <span class="maker-name">Shayan Javed</span>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
