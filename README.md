@@ -144,6 +144,8 @@ Use the **pencil icon** on GitHub to edit step-by-step and create multiple commi
 # ✨ Author
 
 **Vasudev Tripathi** 
+**, Shayan Javed** 
+**, Ayush Das** 
 -B.Tech CSE — Operating Systems Project  
 Lovely Professional University  
 
