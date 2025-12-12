@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/Project-Dynamic%20Memory%20Visualizer-blue.svg?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Algorithms-First%20Fit%20%7C%20Best%20Fit%20%7C%20Worst%20Fit%20%7C%20Next%20Fit-orange.svg?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Language-HTML%20%7C%20CSS%20%7C%20JavaScript-green.svg?style=for-the-badge" />
-  <img src="https://img.shields.io/github/license/<your-username>/dynamic-memory-management-visualizer?style=for-the-badge" />
+  
   <img src="https://img.shields.io/github/last-commit/<your-username>/dynamic-memory-management-visualizer?color=yellow&style=for-the-badge" />
   <img src="https://img.shields.io/github/stars/<your-username>/dynamic-memory-management-visualizer?style=for-the-badge" />
 </p>
