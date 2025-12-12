@@ -168,3 +168,14 @@ function findFirstFit(size) {
     }
     return -1;
 }
+function findBestFit(size) {
+    let bestIndex = -1;
+    let bestSize = Infinity;
+    for (let i = 0; i < memory.length; i++) {
+        if (memory[i].free && memory[i].size >= size && memory[i].size < bestSize) {
+            bestSize = memory[i].size;
+            bestIndex = i;
+        }
+    }
+    return bestIndex;
+}
