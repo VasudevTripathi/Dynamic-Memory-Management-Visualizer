@@ -204,3 +204,65 @@ function findNextFit(size) {
 
     return -1;
 }
+function mergeFreeBlocks() {
+    for (let i = 0; i < memory.length - 1; ) {
+        const current = memory[i];
+        const next = memory[i + 1];
+        if (current.free && next.free) {
+            current.size += next.size;
+            memory.splice(i + 1, 1);
+        } else {
+            i++;
+        }
+    }
+}
+
+function renderMemory() {
+    memoryContainer.innerHTML = "";
+    if (totalMemorySize === 0) return;
+
+    memory.forEach(block => {
+        const div = document.createElement("div");
+        div.classList.add("memory-block");
+        div.classList.add(block.free ? "free" : "allocated");
+        const widthPercent = (block.size / totalMemorySize) * 100;
+        div.style.width = widthPercent + "%";
+
+        if (widthPercent > 8) {
+            // Only show text if block is wide enough
+            div.textContent = block.free
+                ? `Free (${block.size})`
+                : `${block.pid} (${block.size})`;
+        }
+
+        memoryContainer.appendChild(div);
+    });
+}
+
+function updateStats() {
+    let used = 0;
+    let free = 0;
+    let holes = 0;
+
+    memory.forEach(block => {
+        if (block.free) {
+            free += block.size;
+            holes++;
+        } else {
+            used += block.size;
+        }
+    });
+
+    totalSpan.textContent = totalMemorySize;
+    usedSpan.textContent = used;
+    freeSpan.textContent = free;
+    holesSpan.textContent = totalMemorySize === 0 ? 0 : holes;
+}
+
+function addLog(message) {
+    const time = new Date().toLocaleTimeString();
+    const p = document.createElement("p");
+    p.textContent = `[${time}] ${message}`;
+    logDiv.appendChild(p);
+    logDiv.scrollTop = logDiv.scrollHeight;
+}
