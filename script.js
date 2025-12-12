@@ -160,3 +160,11 @@ function deallocate(pid) {
     }
     return found;
 }
+function findFirstFit(size) {
+    for (let i = 0; i < memory.length; i++) {
+        if (memory[i].free && memory[i].size >= size) {
+            return i;
+        }
+    }
+    return -1;
+}
