@@ -179,3 +179,14 @@ function findBestFit(size) {
     }
     return bestIndex;
 }
+function findWorstFit(size) {
+    let worstIndex = -1;
+    let worstSize = -1;
+    for (let i = 0; i < memory.length; i++) {
+        if (memory[i].free && memory[i].size >= size && memory[i].size > worstSize) {
+            worstSize = memory[i].size;
+            worstIndex = i;
+        }
+    }
+    return worstIndex;
+}
