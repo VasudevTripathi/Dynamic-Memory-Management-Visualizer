@@ -111,23 +111,6 @@ Works like First Fit but continues from the block where the last allocation happ
 
 ---
 
-# 🛠️ Local Setup (GUI ONLY)
-
-> No terminal required. Just follow GUI steps.
-
-### Upload files:
-1. Go to GitHub repo  
-2. Click **Add file → Upload files**  
-3. Upload:
-   - `index.html`  
-   - `style.css`  
-   - `script.js`  
-4. Click **Commit changes**
-
-### Edit files:
-Use the **pencil icon** on GitHub to edit step-by-step and create multiple commits.
-
----
 
 # 🌱 Future Enhancements
 
