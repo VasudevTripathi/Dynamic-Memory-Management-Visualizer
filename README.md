@@ -140,16 +140,12 @@ Use the **pencil icon** on GitHub to edit step-by-step and create multiple commi
 
 ---
 
-# 📄 License
-
-This project is licensed under the **MIT License**.  
-See the `LICENSE` file for details.
-
----
 
 # ✨ Author
 
-**Your Name**  
+**Vasudev Tripathi**
+**Ayush Das** 
+**Shayan Javed** 
 B.Tech CSE — Operating Systems Project  
 Lovely Professional University  
 
