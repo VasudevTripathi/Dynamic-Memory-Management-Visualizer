@@ -190,3 +190,17 @@ function findWorstFit(size) {
     }
     return worstIndex;
 }
+function findNextFit(size) {
+    if (memory.length === 0) return -1;
+    let startIndex = nextFitIndex;
+    let i = startIndex;
+
+    do {
+        if (memory[i].free && memory[i].size >= size) {
+            return i;
+        }
+        i = (i + 1) % memory.length;
+    } while (i !== startIndex);
+
+    return -1;
+}
